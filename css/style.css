@@ -96,7 +96,7 @@ body {
   background: rgb(92, 92, 92);
 }
 
-.f-one {
+.f-three {
   -moz-box-flex: 1;
   -webkit-box-flex: 1;
 
@@ -104,6 +104,42 @@ body {
   -moz-box: 1;
 
   flex: 1;
+
+  margin: 1px;
+  padding: 5px;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: rgba(128, 128, 128, 0.72);
+}
+
+.f-two {
+  -moz-box-flex: 2;
+  -webkit-box-flex: 2;
+
+  -webkit-box: 2;
+  -moz-box: 2;
+
+  flex: 2;
+
+  margin: 1px;
+  padding: 5px;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: rgba(128, 128, 128, 0.72);
+}
+
+.f-three {
+  -moz-box-flex: 3;
+  -webkit-box-flex: 3;
+
+  -webkit-box: 3;
+  -moz-box: 3;
+
+  flex: 3;
 
   margin: 1px;
   padding: 5px;
@@ -122,6 +158,7 @@ body {
 
 .bc-left,
 .bc-right {
+  /* height: 125px; */
   padding: 15px;
 }
 
@@ -138,11 +175,9 @@ body {
   margin-bottom: 10px;
 }
 
-pre {
-  font-size: 1.25rem;
-}
-
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -160,6 +195,16 @@ pre {
     -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
+
+  .f-one {
+    order: 3;
+  }
+  .f-two {
+    order: 2;
+  }
+  .f-three {
+    order: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -175,5 +220,15 @@ pre {
     -webkit-flex-direction: row !important;
     -ms-flex-direction: row !important;
     flex-direction: row !important;
+  }
+
+  .f-one {
+    order: 1;
+  }
+  .f-two {
+    order: 2;
+  }
+  .f-three {
+    order: 3;
   }
 }
