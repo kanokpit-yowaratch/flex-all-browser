@@ -13,6 +13,8 @@ body {
   display: -ms-flexbox !important;
   display: -webkit-flex !important;
   display: flex !important;
+
+  position: relative;
 }
 
 .dr-row {
@@ -85,6 +87,15 @@ body {
   justify-content: space-between;
 }
 
+.big-inner {
+  width: 100%;
+}
+
+.web-row .big-inner {
+  height: 125px;
+  background: rgb(92, 92, 92);
+}
+
 .f-one {
   -moz-box-flex: 1;
   -webkit-box-flex: 1;
@@ -125,6 +136,14 @@ body {
 
 .mgb-10 {
   margin-bottom: 10px;
+}
+
+pre {
+  font-size: 1.25rem;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
 }
 
 @media (max-width: 767px) {
